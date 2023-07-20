@@ -1,0 +1,36 @@
+{
+  "name": "360vr-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "module": "esnext",
+  "type": "module",
+  "scripts": {
+    "start": "./scripts/start.sh",
+    "start:dev": "NODE_ENV=development webpack-dev-server --config webpack.config.js --open --watch",
+    "run:dev": "NODE_ENV=development nodemon dist/index.js",
+    "build": "webpack --config webpack.config.js",
+    "lint": "eslint . --ext .ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "adiez",
+  "devDependencies": {
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.17",
+    "@types/node": "^20.3.3",
+    "ts-loader": "^9.4.4",
+    "typescript": "^5.1.6",
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security",
+    "mongodb": "^5.6.0",
+    "nodemon": "^2.0.22",
+    "webpack-node-externals": "^3.0.0",
+    "webpack-shell-plugin": "^0.5.0"
+  }
+}
